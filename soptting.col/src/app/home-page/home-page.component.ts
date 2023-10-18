@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LocalService } from '../services/local.service';
 
 @Component({
   selector: 'app-home-page',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+  constructor(
+    private localStore: LocalService
+  ) {};
+
+  ngOnInit () {
+    console.log(this.localStore.getData("token"));
+  }
 }
