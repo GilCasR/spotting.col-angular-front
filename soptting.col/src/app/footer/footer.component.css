@@ -1,0 +1,79 @@
+.footer {
+    background-color: #35A29F;
+    color: #071952;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    align-items: center;
+    font-family: 'Neuton', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.col-md-6 {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex
+}
+
+.social-icons li {
+    margin-right: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.fa-instagram {
+    content: url("../../assets/instagram_f_icon-icons.com_65485.png");
+    height: auto;
+    max-width: 25px;
+}
+
+
+.fa-linkedin {
+    content: url("../../assets/sociallinkedin_member_70.png");
+    height: auto;
+    max-width: 25px;
+}
+
+.fa-github {
+    content: url("../../assets/github-mark.png");
+    height: auto;
+    max-width: 25px;
+}

@@ -1,1 +1,9 @@
-<p>home-page works!</p>
+<app-header></app-header>
+<div class="photos">
+    <button (click)="previousPhoto()">&#9664;</button>
+    <div class="photo-container" (click)="redirectToHash()">
+        <img [src]="photos[currentPhotoIndex]" alt="Current Photo" />
+    </div>
+    <button (click)="nextPhoto()">&#9654;</button>
+</div>
+<app-footer></app-footer>

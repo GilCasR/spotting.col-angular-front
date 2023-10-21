@@ -1,0 +1,46 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Neuton:wght@300&family=Ubuntu&display=swap');
+/* Header Styles */
+header {
+    background-color: #35A29F; /* Background color for the header */
+    color: #071952; /* Text color for the header */
+    padding: 10px 0; /* Top and bottom padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px ;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 5px;
+    font-family: 'Neuton', sans-serif;
+}
+
+h1 {
+    font-size: 28px; /* Adjust the font size as needed */
+    margin: 0;
+    margin-left: 40px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display the list items horizontally */
+}
+
+li {
+    margin: 0 50px; /* Spacing between menu items */
+}
+
+a {
+    text-decoration: none;
+    color: #fff; /* Text color for menu links */
+    font-weight: bold;
+    font-size: 20px; /* Font size for menu links */
+    color: #071952;
+}
+
+a:hover {
+    color: #F2F7A1; /* Color for links on hover */
+}

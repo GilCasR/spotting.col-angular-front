@@ -8,11 +8,34 @@ import { LocalService } from '../services/local.service';
 })
 export class HomePageComponent {
 
-  constructor(
-    private localStore: LocalService
-  ) {};
+  constructor() {};
 
-  ngOnInit () {
-    console.log(this.localStore.getData("token"));
+  currentPhotoIndex = 0;
+  photos = [
+    '../../assets/landingPage.JPG', 
+    '../../assets/DSCN0836.JPG', 
+    '../../assets/DSCN1058.JPG', 
+    '../../assets/landingPage.JPG', 
+    '../../assets/DSCN0836.JPG'
+  ];
+
+  previousPhoto() {
+    if (this.currentPhotoIndex > 0) {
+      this.currentPhotoIndex--;
+    }else{
+      this.currentPhotoIndex = this.photos.length - 1
+    }
+  }
+
+  nextPhoto() {
+    if (this.currentPhotoIndex < this.photos.length - 1) {
+      this.currentPhotoIndex++;
+    }else{
+      this.currentPhotoIndex = 0
+    }
+  }
+
+  redirectToHash() {
+    window.location.href = '#';
   }
 }

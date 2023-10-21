@@ -1,47 +1,47 @@
-/* Add this to your styles.css or a separate CSS file */
-
-
 .welcome-container {
-    background-image: url('../../assets/landingPage.JPG'); /* Update the image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.3); /* Set transparency by changing the alpha value */
-  }
-  
-  /* Rest of your existing styles for h1 and the button */
-  
-  
-  /* Style for the h1 element */
-  .welcome-container h1 {
-    font-size: 2rem;
-    margin: 0;
-  }
-  
-  /* Style for the enter button */
-  .enter-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF; /* You can change the color */
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-size: 1rem;
-  }
-  
-  /* Style for the enter button on hover */
-  .enter-button:hover {
-    background-color: #0056b3; /* You can change the hover color */
-    cursor: pointer;
-  }
-  
+  background-image: url("../../assets/landingPage.JPG");
+  background-size: cover; /* This will scale the image to cover the container */
+  background-repeat: no-repeat; /* Prevents image from repeating */
+  background-position: center 80%; /* Centers the image both horizontally and vertically */
+  height: 100vh; /* 100% of viewport height */
+  width: 100%; /* 100% of the container's width */
+  font-family: 'Neuton', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* padding: 20px; */
+}
+
+
+.welcome-container h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: white;
+  padding-top: 20px;
+  padding-right: 80px;
+}
+
+.enter-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 80px;
+  background-color: #35A29F;
+  color: #071952;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.enter-button:hover {
+  background-color: #071952;
+  color: #35A29F;
+  cursor: pointer;
+}
