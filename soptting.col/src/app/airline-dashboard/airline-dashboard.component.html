@@ -1,0 +1,86 @@
+<div>
+    <button (click)="hideForm()">Create airline</button>
+    <pre></pre>
+    <div *ngIf="displayForm">
+        <form #createAirline="ngForm"  (ngSubmit)="onSubmit(createAirline)">
+            <div>
+                <label for="name">Airline name</label>
+                <input #name="ngModel"  type="text" name="name" id="airline_name" required ngModel>
+            </div>
+            <div *ngIf="name.touched && name.invalid">
+                Please provide a valid name 
+            </div>
+            <pre></pre>
+            <div>
+                <label for="foundation">Airline foundation (year)</label>
+                <input #foundation="ngModel"  type="number" name="foundation" id="airline_foundation" min="1900" max="2025" required ngModel>
+            </div>
+            <div *ngIf="foundation.touched && foundation.invalid">
+                Please provide a valid year
+            </div>
+            <pre></pre>
+            <div>
+                <label for="rating">Airline Skytrax rating (starts)</label>
+                <input #rating="ngModel"  type="number" name="rating" id="airline_rating" min="0" max="5" ngModel>
+            </div>
+            <div *ngIf="rating.touched && rating.invalid">
+                Please provide a number between 0 and 5
+            </div>
+            <pre></pre>
+            <div>
+                <label for="code">IATA code</label>
+                <input #code="ngModel"  type="text" name="code" id="airline_code" required minlength="2" maxlength="2" ngModel>
+            </div>
+            <div *ngIf="code.touched && code.invalid">
+                Please provide a valid 2 letter code
+            </div>
+            <pre></pre>
+            <div>
+                <label for="office">Main office (city)</label>
+                <input #office="ngModel"  type="text" name="office" id="airline_office" required ngModel>
+            </div>
+            <div *ngIf="office.touched && office.invalid">
+
+            </div>
+            <pre></pre>
+            <div>
+                <label for="country">Country</label>
+                <input #country="ngModel"  type="text" name="country" id="airline_country" required ngModel>
+            </div>
+            <div *ngIf="country.touched && country.invalid">
+
+            </div>
+            <pre></pre>
+            <div>
+                <label for="c_code">Country code</label>
+                <input #cCode="ngModel"  type="text" name="c_code" id="airline_c_code" required ngModel>
+            </div>
+            <div *ngIf="cCode.touched && cCode.invalid">
+
+            </div>
+            <pre></pre> 
+            <!-- <div>
+                <label for=""></label>
+                <input type="text" name="" id="">
+            </div>
+            <pre></pre> -->
+            <div>
+                <label for="airport">Airports</label>
+                <select name="airport" id="airline_airport" (change)="selectAirport($event)">
+                    <option *ngFor="let airport of airports" [ngValue]="airport.id">
+                        {{airport.code}}
+                    </option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div *ngFor="let airport of selectedAirportId">
+            <div>{{airport}}</div>
+            <button (click)="deleteAirport(airport)">x</button>
+        </div>
+    </div>
+</div>
+<div *ngFor="let airline of airlines">
+    <h1>{{airline.name}}</h1>
+    <h2>{{airline.country}}</h2>
+</div>

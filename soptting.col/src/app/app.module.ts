@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AirportsDashboardComponent } from './airports-dashboard/airports-dashboard.component';
+import { AirlineDashboardComponent } from './airline-dashboard/airline-dashboard.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { FooterComponent } from './footer/footer.component';
     HomePageComponent,
     LoginComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent,
+    AirportsDashboardComponent,
+    AirlineDashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -36,11 +36,10 @@ export class LoginComponent {
         .login(this.username, this.password)
         .subscribe(
           (response) => {
-            const data: any = response.data
             if(response.token){
               this.token = response.token
               this.localStore.saveData("token", this.token)
-              this.router.navigate(['/home']);
+              this.router.navigate(['/dashboard']);
             };
           },
           (error) => {

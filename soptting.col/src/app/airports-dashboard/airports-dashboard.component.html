@@ -1,0 +1,13 @@
+<div>
+    <label for="airportSearch">Airport: </label>
+    <input type="text" name="airportSearch" id="airportInput" [(ngModel)]="iataCode">
+    <button (click)="onSearch()">Search</button>
+    <h3>{{errorMsg}}</h3>
+</div>
+<div class="airports-container">
+    <div *ngFor="let airport of airports">
+        <h1>{{airport.name}}</h1>
+        <h2>{{airport.code}}</h2>
+        <h3>{{airport.country}}</h3>
+    </div>
+</div>

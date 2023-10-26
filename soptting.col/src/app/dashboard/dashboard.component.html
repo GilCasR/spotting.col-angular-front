@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="categories">
+    <h1>Airports</h1>
+    <button (click)="displayAirports()">x</button>
+    <app-airports-dashboard *ngIf="showAirports"></app-airports-dashboard>
+</div>
+<div class="categories">
+    <h1>Airlines</h1>
+    <button (click)="displayAirlines()">x</button>
+    <app-airline-dashboard *ngIf="showAirlines"></app-airline-dashboard>
+</div>
