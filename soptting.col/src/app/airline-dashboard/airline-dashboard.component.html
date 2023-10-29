@@ -56,14 +56,14 @@
                 <input #cCode="ngModel"  type="text" name="c_code" id="airline_c_code" required ngModel>
             </div>
             <div *ngIf="cCode.touched && cCode.invalid">
-
             </div>
             <pre></pre> 
-            <!-- <div>
-                <label for=""></label>
-                <input type="text" name="" id="">
+            <div>
+                <label for="Image">Select airline Image</label>
+                <input type="file" name="image" id="image" (change)="onSelect($event)">
+                <img [src]="url" alt="image not uploaded">
             </div>
-            <pre></pre> -->
+            <pre></pre>
             <div>
                 <label for="airport">Airports</label>
                 <select name="airport" id="airline_airport" (change)="selectAirport($event)">
@@ -83,4 +83,5 @@
 <div *ngFor="let airline of airlines">
     <h1>{{airline.name}}</h1>
     <h2>{{airline.country}}</h2>
+    <img src="{{airline.logo}}" alt="">
 </div>
