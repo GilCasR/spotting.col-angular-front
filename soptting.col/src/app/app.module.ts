@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AirportsDashboardComponent } from './airports-dashboard/airports-dashboard.component';
 import { AirlineDashboardComponent } from './airline-dashboard/airline-dashboard.component';
 import { CloudinaryModule } from '@cloudinary/ng';
+import { AircraftTypeDashboardComponent } from './aircraft-type-dashboard/aircraft-type-dashboard.component';
 
 
 
@@ -27,7 +28,8 @@ import { CloudinaryModule } from '@cloudinary/ng';
     FooterComponent,
     DashboardComponent,
     AirportsDashboardComponent,
-    AirlineDashboardComponent
+    AirlineDashboardComponent,
+    AircraftTypeDashboardComponent
   ],
   imports: [
     BrowserModule,

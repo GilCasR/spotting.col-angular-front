@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+
 import { AirportService } from '../services/airport.service';
+
+import { Map, tileLayer } from 'leaflet';
 
 
 interface AirportAttributes {
@@ -36,6 +39,16 @@ export class AirportsDashboardComponent {
               this.airports = response
             }
           )
+  }
+
+  ngAfterViewInit(): void {
+    const map =  new Map('map').setView([-33.393001556396484, -70.78579711914062], 13);
+
+    tileLayer('https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: 'Map <a href="https://memomaps.de/">memomaps.de</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map)
+
   }
 
   onSearch(): void {

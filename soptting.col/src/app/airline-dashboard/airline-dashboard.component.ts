@@ -79,6 +79,14 @@ export class AirlineDashboardComponent {
           console.log(response);
         }
       )    
+
+    this.airlineServices
+      .getAll()
+      .subscribe(
+        (response) => {
+          this.airlines = response
+        }
+      );
   }
 
   hideForm(): void {

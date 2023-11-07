@@ -1,0 +1,13 @@
+<div>
+    <label for="manufacturer">Manufacturer:</label>
+    <input name="manufacturer" type="text" [(ngModel)]="manufacturer">
+    <label for="type">Type</label>
+    <input name="type" type="text" [(ngModel)]="type">
+    <button (click)="onSearch()">Search</button>
+</div>
+<div> 
+    <div *ngFor="let type of aircraftTypes">
+        <h2>{{type.model}}</h2>
+        <h3>{{type.manufacturer}}</h3>
+    </div>
+</div>
