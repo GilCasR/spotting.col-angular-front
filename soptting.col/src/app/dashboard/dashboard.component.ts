@@ -12,6 +12,7 @@ export class DashboardComponent {
   showAirports: boolean = false;
   showAirlines: boolean = false;
   showAircraftTypes: boolean = false;
+  showAircraft: boolean = false;
 
   constructor( 
     private localStore: LocalService,
@@ -37,5 +38,9 @@ export class DashboardComponent {
 
   displayAircraftTypes(): void {
     this.showAircraftTypes = !this.showAircraftTypes
+  }
+
+  displayAircrafts(): void {
+    this.showAircraft = !this.showAircraft
   }
 }

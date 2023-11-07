@@ -1,0 +1,50 @@
+<div>
+    <button (click)="hideForm()">Create aircraft</button>
+    <div *ngIf="displayForm">
+        <form #createAircraft="ngForm" (ngSubmit)="onSubmit(createAircraft)">
+            <div>
+                <label for="registration">Registration:</label>
+                <input #registration="ngModel" type="text" name="registration" id="ac_registration" required ngModel>
+            </div>
+            <pre></pre>
+            <div>
+                <label for="type">Aircraft Type:</label>
+                <input #type="ngModel" type="text" name="type" id="ac_type" required ngModel>
+            </div>
+            <pre></pre>
+            <div>
+                <label for="description">Description:</label>
+                <input #description="ngModel" type="text" name="description" id="ac_description" required ngModel>
+            </div>
+            <pre></pre>
+            <div>
+                <label for="livery">Special Libery:</label>
+                <input #livery="ngModel" type="checkbox" name="livery" id="ac_livery" ngModel>
+            </div>
+            <pre></pre>
+            <div>
+                <label for="airline">Airline</label>
+                <select #airline="ngModel" name="airline" id="ac_airline" ngModel>
+                    <option *ngFor="let airline of airlines" [ngValue]="airline.id">
+                        {{airline.name}}
+                    </option>
+                </select>
+            </div>
+            <pre></pre>
+            <div>
+                <label for="aircraftType">Type</label>
+                <select #aircraftType="ngModel" name="aircraftType" id="ac_type" ngModel>
+                    <option *ngFor="let type of types" [ngValue]="type.id">
+                        {{type.model}}
+                    </option>
+                </select>
+            </div>
+            <pre></pre>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<div *ngFor="let aircraft of aircrafts">
+    <h1>{{aircraft.registration}}</h1>
+    <h2>{{aircraft.type}}</h2>
+</div>
