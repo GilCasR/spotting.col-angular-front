@@ -9,10 +9,12 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent {
   token: string | null = "";
+
   showAirports: boolean = false;
   showAirlines: boolean = false;
   showAircraftTypes: boolean = false;
   showAircraft: boolean = false;
+  showPhotos: boolean = false;
 
   constructor( 
     private localStore: LocalService,
@@ -38,9 +40,13 @@ export class DashboardComponent {
 
   displayAircraftTypes(): void {
     this.showAircraftTypes = !this.showAircraftTypes
-  }
+  };
 
   displayAircrafts(): void {
     this.showAircraft = !this.showAircraft
+  };
+
+  displayPhotos(): void {
+    this.showPhotos = !this.showPhotos
   }
 }

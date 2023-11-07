@@ -1,0 +1,47 @@
+<div>
+    <button (click)="hideForm()">Submit photo</button>
+    <pre></pre>
+    <div *ngIf="displayForm">
+        <form #createPhoto="ngForm" (ngSubmit)="onSubmit(createPhoto)"> 
+            <div>
+                <label for="date">Date:</label>
+                <input #date="ngModel" type="date" name="date" id="ph_date" required ngModel>
+            </div>
+            <pre></pre>
+            <div>
+                <label for="description">Description:</label>
+                <input #description="ngModel" type="text" name="description" id="ph_date" required ngModel>
+            </div>
+            <pre></pre>
+            <div>
+                <label for="aircraft">Aircraft:</label>
+                <select #aircraft="ngModel" name="aircraft" id="ph_aircraft" ngModel>
+                    <option *ngFor="let aircraft of aircrafts" [ngValue]="aircraft.id">
+                        {{aircraft.registration}}
+                    </option>
+                </select>
+            </div>
+            <pre></pre>
+            <div>
+                <label for="airport">Airport:</label>
+                <select #airport="ngModel" name="airport" id="airport" ngModel>
+                    <option *ngFor="let airport of airports" [ngValue]="airport.id">
+                        {{airport.code}}
+                    </option>
+                </select>
+            </div>
+            <pre></pre>
+            <div>
+                <label for="image">Select photo file:</label>
+                <input type="file" name="image" id="image" (change)="onSelect($event)">
+                <img [src]="url" alt="image not uploaded">
+            </div>
+            <pre></pre>
+            <button type="submit">Submit</button>      
+        </form>
+    </div>
+</div>
+<div *ngFor="let photo of photos">
+    <h1>{{photo.Aircraft.registration}}</h1>
+    <img src={{photo.link}} alt="image not loaded">
+</div>
